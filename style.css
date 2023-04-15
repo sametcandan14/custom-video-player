@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: #e3f2fd;
+}
+
+body,
+.video-controls,
+.video-timer,
+.options {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  max-width: 900px;
+  width: 98%;
+  position: relative;
+  background: #000;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.wrapper {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+.wrapper::before {
+  content: "";
+  bottom: 0;
+  width: 100%;
+  z-index: -1;
+  position: absolute;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+  height: calc(100% + 35px);
+}
+
+.video-controls {
+  padding: 5px 20px 10px;
+}
+
+.video-controls .options {
+  width: 100%;
+}
+
+.video-controls .options:first-child {
+  justify-content: flex-start;
+}
+
+.video-controls .options:last-child {
+  justify-content: flex-end;
+}
+
+.options button {
+  width: 40px;
+  height: 40px;
+  border: none;
+  color: #fff;
+  font-size: 19px;
+  background: none;
+  cursor: pointer;
+}
+
+.options button :where(i, span) {
+  width: 100%;
+  height: 100%;
+  line-height: 40px;
+}
+
+.options input {
+  height: 4px;
+  max-width: 75px;
+}
+
+.options .video-timer {
+  font-size: 14px;
+  color: #efefef;
+  margin-left: 15px;
+}
+
+.video-timer .seperator {
+  font-size: 16px;
+  margin: 0 5px;
+  font-family: "Open Sans";
+}
+.container video {
+  width: 100%;
+}
