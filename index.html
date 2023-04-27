@@ -55,9 +55,19 @@
             </button>
           </li>
           <li class="options right">
-            <button class="playback-speed">
-              <span class="material-symbols-rounded">slow_motion_video</span>
-            </button>
+            <div class="playback-content">
+              <button class="playback-speed">
+                <span class="material-symbols-rounded">slow_motion_video</span>
+              </button>
+              <ul class="speed-options">
+                <li>2x</li>
+                <li>1.5x</li>
+                <li class="active">Normal</li>
+                <li>0.75x</li>
+                <li>0.5x</li>
+              </ul>
+            </div>
+
             <button class="pic-in-pic">
               <span class="material-symbols-rounded"
                 >picture_in_picture_alt</span
@@ -72,5 +82,7 @@
       </div>
       <video src="demo-video.mp4"></video>
     </div>
+
+    <script src="script.js"></script>
   </body>
 </html>
