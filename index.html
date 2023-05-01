@@ -23,7 +23,7 @@
     <title>Custom Video Player</title>
   </head>
   <body>
-    <div class="container">
+    <div class="container show-controls">
       <div class="wrapper">
         <div class="video-timeline">
           <div class="progress-area">
@@ -36,7 +36,7 @@
             <button class="volume">
               <i class="fa-solid fa-volume-high"></i>
             </button>
-            <input type="range" />
+            <input type="range" min="0" max="1" step="any" />
             <div class="video-timer">
               <p class="current-time">00:00</p>
               <p class="seperator">/</p>
@@ -60,11 +60,11 @@
                 <span class="material-symbols-rounded">slow_motion_video</span>
               </button>
               <ul class="speed-options">
-                <li>2x</li>
-                <li>1.5x</li>
-                <li class="active">Normal</li>
-                <li>0.75x</li>
-                <li>0.5x</li>
+                <li data-speed="2">2x</li>
+                <li data-speed="1.5">1.5x</li>
+                <li data-speed="1" class="active">Normal</li>
+                <li data-speed="0.75">0.75x</li>
+                <li data-speed="0.5">0.5x</li>
               </ul>
             </div>
 
@@ -80,7 +80,7 @@
           </li>
         </ul>
       </div>
-      <video src="demo-video.mp4"></video>
+      <video src="londra.mp4"></video>
     </div>
 
     <script src="script.js"></script>

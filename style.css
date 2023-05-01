@@ -29,12 +29,27 @@ body,
   border-radius: 5px;
   overflow: hidden;
 }
+
+.container.fullscreen {
+  max-width: 100%;
+  width: 100%;
+}
 .wrapper {
   position: absolute;
   left: 0;
   right: 0;
-  bottom: 0;
+  bottom: -15px;
   z-index: 1;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.08s ease;
+}
+
+.container.show-controls .wrapper {
+  bottom: 0;
+  opacity: 1;
+  pointer-events: auto;
+  transition: all 0.13s ease;
 }
 
 .wrapper::before {
@@ -161,7 +176,7 @@ body,
   transition: opacity 0.13s ease;
 }
 
-.playback-content button:hover ~ .speed-options {
+.playback-content .speed-options.show {
   opacity: 1;
   pointer-events: auto;
 }
